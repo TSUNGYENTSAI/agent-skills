@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codebase Visual Docs"
+  short_description: "Explain existing systems with reader-focused visuals"
+  default_prompt: "Use $codebase-visual-docs to explain this existing system, choose reader questions that fit the scope, and check the finished document against them."
