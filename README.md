@@ -20,7 +20,7 @@ Ask Codex to install the skill from this repository:
 $skill-installer Install codebase-visual-docs from https://github.com/TSUNGYENTSAI/agent-skills/tree/main/skills/codebase-visual-docs
 ```
 
-For another skill, replace the name and repository path in that command with any skill from the table. Installation is a separate, explicit action; committing a skill here does not install or activate it. When a skill is updated, refresh or reinstall the existing local copy. The four judgment skills are self-contained, including their `references/decision-cases.md`; the standalone `examples/codebase-visual-docs/` teaching fixture remains repository-level and optional.
+For another skill, replace the name and repository path in that command with any skill from the table. Installation is a separate, explicit action; committing a skill here does not install or activate it. When a skill is updated, refresh or reinstall the existing local copy. All five skills are self-contained. Each installs with its own optional `references/` materials, including decision cases and the codebase-visual-docs worked fixture.
 
 This installs the selected skill for local use. If it does not appear, restart Codex. See the [official skills documentation](https://learn.chatgpt.com/docs/build-skills) for local discovery and installation details.
 
@@ -64,7 +64,7 @@ Use $decision-driven-poc to define what our next feasibility experiment must lea
 
 ## Examples
 
-The [self-contained example](examples/codebase-visual-docs/request.md) includes a small Python fixture, an authoring request, and a worked explanation with a Mermaid flowchart. It demonstrates the intended output; it is not evidence of production use or measured skill effectiveness.
+The [self-contained example](skills/codebase-visual-docs/references/worked-example/request.md) includes a small Python fixture, an authoring request, and a worked explanation with a Mermaid flowchart. It demonstrates the intended output; it is not evidence of production use or measured skill effectiveness.
 
 Each new skill bundles a small pair of **synthetic, contrasting decision cases** under its own `references/` directory. Standard skill installation therefore includes the cases without extra repository-wide downloads. They demonstrate intended judgments and exceptions, not independent agent evaluations:
 
@@ -79,8 +79,7 @@ Each new skill bundles a small pair of **synthetic, contrasting decision cases**
 skills/<skill-name>/
   SKILL.md             Instructions and trigger description
   agents/openai.yaml   Codex display metadata
-  references/          Optional cases/guidance included in the installation; load only when relevant
-examples/codebase-visual-docs/  Optional standalone worked example outside the installed skill
+  references/          Optional cases, guidance, and worked fixtures; bundled with the installed skill
 ```
 
 Maintain skills here, then refresh local installations deliberately. Keep each skill focused; add scripts or references when a real workflow needs them. Before publishing changes, validate the skill structure, resolve relative links, and run any affected examples. Structural checks do not establish whether a skill makes good decisions; use real tasks to improve it.

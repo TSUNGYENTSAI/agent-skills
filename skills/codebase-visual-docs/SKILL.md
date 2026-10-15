@@ -48,3 +48,5 @@ For a substantial artifact or unresolved technical/reader concern, use [review-a
 Finish when the requested scope and original reader questions are covered, material contradictions are resolved or precisely recorded, and relevant checks pass or their limitations are reported. Do not keep redesigning an accepted baseline. Synthetic trials or static checks do not establish that the skill reduces real-world revision burden; use later real tasks to learn that.
 
 Deliver the requested artifact, maintained source locations, important changes/limits, and concise validation evidence. Installation, publication, commits, and external actions follow existing user authorization and repository instructions; this skill grants none.
+
+For an optional end-to-end synthetic teaching fixture, see [the worked example](references/worked-example/request.md). Load it only when demonstrating or testing the skill, not for routine architecture work.
