@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decision-Driven PoC"
+  short_description: "Design experiments around decisions and stop rules"
+  default_prompt: "Use $decision-driven-poc to define the decision, key uncertainty, minimum credible experiment, exclusions, and conditions to proceed, pivot, or stop."

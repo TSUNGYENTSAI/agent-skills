@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Evidence Review"
+  short_description: "Align engineering claims with evidence and gaps"
+  default_prompt: "Use $engineering-evidence-review to examine what these tests or results actually support, identify consequential gaps, and recommend only necessary follow-up evidence."

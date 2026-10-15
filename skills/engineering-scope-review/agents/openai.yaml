@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Scope Review"
+  short_description: "Right-size plans without missing the intended outcome"
+  default_prompt: "Use $engineering-scope-review to assess this proposed work against its intended outcome, highlight over- and under-scoping risks, and recommend whether to proceed or revise."

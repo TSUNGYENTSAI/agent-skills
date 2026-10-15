@@ -1,0 +1,4 @@
+interface:
+  display_name: "Semantic Boundary Review"
+  short_description: "Clarify facts, authority, abstractions, and fidelity"
+  default_prompt: "Use $semantic-boundary-review to distinguish domain facts and assumptions, trace who owns the decisions, and challenge unjustified boundaries or loss of information."
