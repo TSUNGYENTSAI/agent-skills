@@ -38,4 +38,4 @@ State **supported**, **conditional**, or **not established** for each consequent
 
 Do not turn a result review into a new research program, claim domain acceptance from solver success, or equate CI green with production-ready.
 
-See [contrasting decision cases](../../examples/engineering-evidence-review/decision-cases.md) for synthetic illustrations.
+See [contrasting decision cases](references/decision-cases.md) for synthetic illustrations.

@@ -35,4 +35,4 @@ When the plan is already adequate, say so and stop. Do not restate an entire pro
 - **Reject artificial minimalism:** The agreed outcome is migrating all active consumers to a new contract. A pilot-only change leaves the real migration undone; preserve full delivery unless a genuine blocker requires staging.
 - **Prefer staging when warranted:** Irreversible data changes, unknown external consumers, or safety-critical behavior may justify a pilot, migration gate, or stronger validation.
 
-For reusable illustrations, see [contrasting decision cases](../../examples/engineering-scope-review/decision-cases.md). These are synthetic, not measurements of skill effectiveness.
+For reusable illustrations, see [contrasting decision cases](references/decision-cases.md). These are synthetic, not measurements of skill effectiveness.

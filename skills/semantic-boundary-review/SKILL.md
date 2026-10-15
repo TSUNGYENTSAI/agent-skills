@@ -29,4 +29,4 @@ Highlight the few semantic distinctions that matter, their authority and transfo
 
 Separate **confirmed as-built**, **proposed design**, and **unresolved** claims. If a dependency is truly undecided, label it; do not supply speculative implementation as fact. Do not change schemas or code unless requested.
 
-See [contrasting decision cases](../../examples/semantic-boundary-review/decision-cases.md) for synthetic examples.
+See [contrasting decision cases](references/decision-cases.md) for synthetic examples.

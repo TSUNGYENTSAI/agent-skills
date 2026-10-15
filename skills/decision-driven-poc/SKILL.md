@@ -33,4 +33,4 @@ Use this skill for exploratory decisions. For sizing an already authorized imple
 
 Keep outputs concise: the decision, pivotal uncertainty, bounded experiment, sufficiency/stop logic, and next action. Do not create tickets, build prototypes, or initiate external research unless the request authorizes it.
 
-See [contrasting decision cases](../../examples/decision-driven-poc/decision-cases.md) for synthetic examples.
+See [contrasting decision cases](references/decision-cases.md) for synthetic examples.
