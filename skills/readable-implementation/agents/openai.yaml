@@ -1,0 +1,4 @@
+interface:
+  display_name: "Readable Implementation"
+  short_description: "Keep behavior complete and implementation easy to follow"
+  default_prompt: "Use $readable-implementation to implement this change with clear domain names, direct control flow, and only the complexity the behavior requires."
