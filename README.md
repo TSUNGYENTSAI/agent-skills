@@ -1,12 +1,13 @@
 # Agent Skills
 
-Personal agent skills by Tsung-Yen Tsai: reusable, judgment-oriented workflows for planning, reviewing, and explaining engineering work.
+Personal agent skills by Tsung-Yen Tsai: reusable, judgment-oriented workflows for implementing, planning, reviewing, and explaining engineering work.
 
 ## Available skills
 
 | Skill | Use it for |
 | --- | --- |
 | [Codebase Visual Docs](skills/codebase-visual-docs/SKILL.md) | Explain an existing system through technical documents, architecture diagrams, and focused flow visualizations. |
+| [Readable Implementation](skills/readable-implementation/SKILL.md) | Implement complete features and refactors with direct flow, clear names, and justified complexity. |
 | [Engineering Scope Review](skills/engineering-scope-review/SKILL.md) | Review proposed work for outcome fit, avoiding both overengineering and artificial under-scoping. |
 | [Engineering Evidence Review](skills/engineering-evidence-review/SKILL.md) | Judge what tests, benchmarks, and demonstrations actually establish, and which evidence is needed next. |
 | [Semantic Boundary Review](skills/semantic-boundary-review/SKILL.md) | Clarify facts, assumptions, decision authority, interfaces, and representation fidelity before abstracting. |
@@ -20,7 +21,7 @@ Ask Codex to install the skill from this repository:
 $skill-installer Install codebase-visual-docs from https://github.com/TSUNGYENTSAI/agent-skills/tree/main/skills/codebase-visual-docs
 ```
 
-For another skill, replace the name and repository path in that command with any skill from the table. Installation is a separate, explicit action; committing a skill here does not install or activate it. When a skill is updated, refresh or reinstall the existing local copy. All five skills are self-contained. Each installs with its own optional `references/` materials, including decision cases and the codebase-visual-docs worked fixture.
+For another skill, replace the name and repository path in that command with any skill from the table. Installation is a separate, explicit action; committing a skill here does not install or activate it. When a skill is updated, refresh or reinstall the existing local copy. All skills are self-contained. Each installs with its own optional `references/` materials, including decision cases and the codebase-visual-docs worked fixture.
 
 This installs the selected skill for local use. If it does not appear, restart Codex. See the [official skills documentation](https://learn.chatgpt.com/docs/build-skills) for local discovery and installation details.
 
@@ -51,6 +52,18 @@ the current implementation contradicts it.
 
 The skill starts from what the system actually does. It separates implemented behavior, intended changes, and unknowns; chooses visuals around reader questions; and keeps exact interfaces and code details discoverable. Capability-roadmap guidance applies only when explicitly requested. It does not implement product-runtime changes.
 
+## Use Readable Implementation
+
+```text
+Use $readable-implementation to implement this feature. Keep the complete
+requested behavior, make the main flow easy to follow, and introduce only
+abstractions with a concrete responsibility or consumer.
+```
+
+It also applies to authorized cleanup of over-layered code. It optimizes the
+reader's understanding rather than line counts or the shortest diff. It does
+not require the review skills as prerequisites or authorize a wider refactor.
+
 ## Use the judgment skills
 
 Invoke only the skill relevant to the current decision. They are **independent tools**, not a mandatory four-stage review pipeline.
@@ -66,12 +79,14 @@ Use $decision-driven-poc to define what our next feasibility experiment must lea
 
 The [self-contained example](skills/codebase-visual-docs/references/worked-example/request.md) includes a small Python fixture, an authoring request, and a worked explanation with a Mermaid flowchart. It demonstrates the intended output; it is not evidence of production use or measured skill effectiveness.
 
-Each new skill bundles a small pair of **synthetic, contrasting decision cases** under its own `references/` directory. Standard skill installation therefore includes the cases without extra repository-wide downloads. They demonstrate intended judgments and exceptions, not independent agent evaluations:
+Each of the four judgment skills bundles **synthetic, contrasting decision cases** under its own `references/` directory. Standard skill installation therefore includes the cases without extra repository-wide downloads. They demonstrate intended judgments and exceptions, not independent agent evaluations:
 
 - [Engineering Scope Review cases](skills/engineering-scope-review/references/decision-cases.md)
 - [Engineering Evidence Review cases](skills/engineering-evidence-review/references/decision-cases.md)
 - [Semantic Boundary Review cases](skills/semantic-boundary-review/references/decision-cases.md)
 - [Decision-Driven PoC cases](skills/decision-driven-poc/references/decision-cases.md)
+
+Readable Implementation includes [before/after implementation examples](skills/readable-implementation/references/implementation-examples.md), with exceptions that preserve necessary complexity. They illustrate intended behavior, not measured effectiveness.
 
 ## Repository layout
 
@@ -86,7 +101,7 @@ Maintain skills here, then refresh local installations deliberately. Keep each s
 
 ## 中文說明
 
-這個 repository 收錄可持續修正的個人工程判斷 Skills。除 `codebase-visual-docs` 用於建立 code-grounded 的架構解釋外，新增四項輕量 v0：`engineering-scope-review`（工程範圍）、`engineering-evidence-review`（證據與宣稱）、`semantic-boundary-review`（語意與權責）、`decision-driven-poc`（探索性 PoC）。它們各有明確使用情境，不需同時啟動；使用後可依實際回饋調整、合併或刪除。Skill 指令與可重用 prompt 維持英文，交付內容可使用中文。
+這個 repository 收錄可持續修正的個人工程判斷 Skills。除 `codebase-visual-docs` 用於建立 code-grounded 的架構解釋外，另有四項工程判斷 skills：`engineering-scope-review`（工程範圍）、`engineering-evidence-review`（證據與宣稱）、`semantic-boundary-review`（語意與權責）、`decision-driven-poc`（探索性 PoC）。它們各有明確使用情境，不需同時啟動；使用後可依實際回饋調整、合併或刪除。`readable-implementation` 用於日常實作與重構：保留完整功能，以清楚名稱、直接流程及有理由的抽象降低理解負擔，不以最少行數或縮減功能為目標。Skill 指令與可重用 prompt 維持英文，交付內容可使用中文。
 
 ## License
 
