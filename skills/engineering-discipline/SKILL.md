@@ -117,4 +117,4 @@ If no reliable project-local way exists to prove behavior, propose a `verify-<ap
 
 ## Attribution and scope
 
-Principles informed by Lauren Tan's 2026 *All Code Is Slop (Except Mine)* talk and the official Cursor `pstack` skills (especially `correct`, `no-comments`, `create-verification-skill`, `maintain-verification-skill`, `statechart`, `prove-it-works`, `reflect`). This is a selective adaptation, not a copy or a claim that the speaker mandates these defaults. See `references/source-and-adaptation.md`.
+Principles informed by Lauren Tan's 2026 *All Code Is Slop (Except Mine)* talk and the official Cursor `pstack` skills (especially `correct`, `no-comments`, `create-verification-skill`, `maintain-verification-skill`, `statechart`, `principle-prove-it-works`, `reflect`). This is a selective adaptation, not a copy or a claim that the speaker mandates these defaults. See `references/source-and-adaptation.md`.
