@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Discipline"
+  short_description: "Develop with simple code and reproducible proof"
+  default_prompt: "Use $engineering-discipline to make this change along the canonical path, verify it on a real execution surface, and improve the environment if a recurring mistake is found."
