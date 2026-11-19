@@ -8,6 +8,7 @@ Personal agent skills by Tsung-Yen Tsai: reusable, judgment-oriented workflows f
 | --- | --- |
 | [Codebase Visual Docs](skills/codebase-visual-docs/SKILL.md) | Explain an existing system through technical documents, architecture diagrams, and focused flow visualizations. |
 | [Readable Implementation](skills/readable-implementation/SKILL.md) | Implement complete features and refactors with direct flow, clear names, and justified complexity. |
+| [Engineering Discipline](skills/engineering-discipline/SKILL.md) | Follow a cross-project development loop: sparse purposeful comments, executable verification, proof-oriented review, and preventing recurring architectural mistakes. |
 | [Engineering Scope Review](skills/engineering-scope-review/SKILL.md) | Review proposed work for outcome fit, avoiding both overengineering and artificial under-scoping. |
 | [Engineering Evidence Review](skills/engineering-evidence-review/SKILL.md) | Judge what tests, benchmarks, and demonstrations actually establish, and which evidence is needed next. |
 | [Semantic Boundary Review](skills/semantic-boundary-review/SKILL.md) | Clarify facts, assumptions, decision authority, interfaces, and representation fidelity before abstracting. |
@@ -64,6 +65,18 @@ It also applies to authorized cleanup of over-layered code. It optimizes the
 reader's understanding rather than line counts or the shortest diff. It does
 not require the review skills as prerequisites or authorize a wider refactor.
 
+## Use Engineering Discipline
+
+Use this for substantial agent-assisted implementation or repeated architecture/verification problems. It is a **working habit**, not another mandatory review gate:
+
+```text
+Use $engineering-discipline to extend the existing implementation, avoid
+unnecessary wrappers and comments, verify the real behavior with reproducible
+evidence, and improve the repo's development environment when a mistake repeats.
+```
+
+The skill keeps the project-specific architecture and verification contracts in the project. For a specialized question, invoke the relevant focused skill (for example, `readable-implementation` for code structure or `engineering-evidence-review` for auditing claims). Do not automatically chain all the skills. The [pilot protocol](skills/engineering-discipline/references/pilot-protocol.md) is an evaluation recipe, not evidence of proven benefit.
+
 ## Use the judgment skills
 
 Invoke only the skill relevant to the current decision. They are **independent tools**, not a mandatory four-stage review pipeline.
@@ -101,7 +114,7 @@ Maintain skills here, then refresh local installations deliberately. Keep each s
 
 ## 中文說明
 
-這個 repository 收錄可持續修正的個人工程判斷 Skills。除 `codebase-visual-docs` 用於建立 code-grounded 的架構解釋外，另有四項工程判斷 skills：`engineering-scope-review`（工程範圍）、`engineering-evidence-review`（證據與宣稱）、`semantic-boundary-review`（語意與權責）、`decision-driven-poc`（探索性 PoC）。它們各有明確使用情境，不需同時啟動；使用後可依實際回饋調整、合併或刪除。`readable-implementation` 用於日常實作與重構：保留完整功能，以清楚名稱、直接流程及有理由的抽象降低理解負擔，不以最少行數或縮減功能為目標。Skill 指令與可重用 prompt 維持英文，交付內容可使用中文。
+這個 repository 收錄可持續修正的個人工程判斷 Skills。新增的 `engineering-discipline` 是跨專案的日常開發習慣，強調沿用正式架構、少寫無意義註解、實際執行驗證，以及用可重現證據 Review；它不取代其他專項 Skills，也不是必經審核流程。除 `codebase-visual-docs` 用於建立 code-grounded 的架構解釋外，另有四項工程判斷 skills：`engineering-scope-review`（工程範圍）、`engineering-evidence-review`（證據與宣稱）、`semantic-boundary-review`（語意與權責）、`decision-driven-poc`（探索性 PoC）。它們各有明確使用情境，不需同時啟動；使用後可依實際回饋調整、合併或刪除。`readable-implementation` 用於日常實作與重構：保留完整功能，以清楚名稱、直接流程及有理由的抽象降低理解負擔，不以最少行數或縮減功能為目標。Skill 指令與可重用 prompt 維持英文，交付內容可使用中文。
 
 ## License
 
